@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item Price Calculator</title>
+</head>
+<body>
+    <h2>Item Price Calculator</h2>
+    <form method="POST">
+        <label>Enter Price per Kg (₹):</label><br>
+        <input type="text" name="price_per_kg" required><br><br>
+
+        <label>Select Weight Unit:</label><br>
+        <select name="unit">
+            <option value="Kilogram (kg)">Kilogram (kg)</option>
+            <option value="Gram (g)">Gram (g)</option>
+        </select><br><br>
+
+        <label>Enter Weight:</label><br>
+        <input type="text" name="weight" required><br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if result %}
+        <h3>{{ result }}</h3>
+    {% endif %}
+</body>
+</html>
